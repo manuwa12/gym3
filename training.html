@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Packages - Energym</title>
+    <link rel="stylesheet" href="training.css">
+</head>
+<body>
+    <section class="packages-section">
+        <div class="packages-container">
+            <h1 class="section-title">LDF PACKAGES</h1>
+            
+            <div class="packages-grid">
+                <!-- Basic Package -->
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="4.JPG" alt="Basic Package">
+                    </div>
+                    <div class="package-name">Basic</div>
+                    <div class="package-price">RS.3000<span>/month</span></div>
+                    <ul class="package-features">
+                        <li>1 Month Service</li>
+                        <li>Meal Plan or Workout Plan</li>
+                        <li>Custom Plan Based on Goal</li>
+                        <li>Supplement Guidance</li>
+                        <li>48–72 Hour WhatsApp Support</li>
+                    </ul>
+                  <button class="package-btn" onclick="window.location.href='bank.html'">
+    Get Started
+</button>
+
+                </div>
+
+                <!-- Standard Package -->
+                <div class="package-card featured">
+                    <div class="package-image">
+                        <img src="1.JPG" alt="Standard Package">
+                    </div>
+                    <div class="package-name">Bronze</div>
+                    <div class="package-price">RS.5000<span>/month</span></div>
+                    <ul class="package-features">
+                        <li>1 Month Personal Training</li>
+                        <li>Personalized Meal & Workout Plan</li>
+                        <li>Monthly Progress Check-in</li>
+                        <li>Supplement Guidance</li>
+                        <li>72 Hour WhatsApp Support</li>
+                    </ul>
+                   <button class="package-btn" onclick="window.location.href='bank.html'">
+    Get Started
+</button>
+
+                </div>
+
+                <!-- Premium Package -->
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="2.JPG" alt="Premium Package">
+                    </div>
+                    <div class="package-name">Gold</div>
+                    <div class="package-price">RS.7500<span>/month</span></div>
+                    <ul class="package-features">
+                        <li>1 Month Personal Training</li>
+                        <li>Personalized Meal & Training Plan</li>
+                        <li>Progress Check-ins (Every 2 Weeks)</li>
+                        <li>Supplement Guidance</li>
+                        <li>48–72 Hour WhatsApp Support</li>
+                    </ul>
+               <button class="package-btn" onclick="window.location.href='bank.html'">
+    Get Started
+</button>
+
+
+   
+</button>
+
+
+                </div>
+
+                <!-- Elite Package -->
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="3.JPG" alt="Elite Package">
+                    </div>
+                    <div class="package-name">Premium</div>
+                    <div class="package-price">RS.9999<span>/month</span></div>
+                    <ul class="package-features">
+                        <li>1 Month Personal Training</li>
+                        <li>Custom Meal & Workout Plan</li>
+                        <li>Weekly Progress Check-ins</li>
+                        <li>High Attention Coaching</li>
+                        <li>24–48 Hour WhatsApp Support</li>
+                    </ul>
+                   <button class="package-btn" onclick="window.location.href='bank.html'">
+    Get Started
+</button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bank Details Modal -->
+    <div id="bankModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeBankDetails()">&times;</span>
+            <h2>Payment Details - <span id="packageName"></span></h2>
+            <p class="package-amount">Amount: <span id="packageAmount"></span></p>
+            
+            <div class="bank-details">
+                <h3>Bank Transfer Details</h3>
+                <div class="detail-item">
+                    <label>Bank Name:</label>
+                    <p>ABC Bank Limited</p>
+                </div>
+                <div class="detail-item">
+                    <label>Account Holder:</label>
+                    <p>Energym Fitness</p>
+                </div>
+                <div class="detail-item">
+                    <label>Account Number:</label>
+                    <p>1234567890</p>
+                </div>
+                <div class="detail-item">
+                    <label>IFSC Code:</label>
+                    <p>ABCD0001234</p>
+                </div>
+                <div class="detail-item">
+                    <label>SWIFT Code:</label>
+                    <p>ABCDUS33</p>
+                </div>
+                <div class="detail-item">
+                    <label>UPI ID:</label>
+                    <p>energym@upi</p>
+                </div>
+            </div>
+
+            <div class="payment-instructions">
+                <h3>Payment Instructions</h3>
+                <ol>
+                    <li>Transfer the amount to the bank account above</li>
+                    <li>Include your membership ID in the transaction reference</li>
+                    <li>Send confirmation screenshot to support@energym.com</li>
+                    <li>Your membership will be activated within 24 hours</li>
+                </ol>
+            </div>
+
+            <button class="modal-btn" onclick="closeBankDetails()">Close</button>
+        </div>
+    </div>
+
+    <script src="training.js"></script>
+</body>
+</html>

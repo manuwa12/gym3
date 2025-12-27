@@ -1,0 +1,601 @@
+/* ===========================
+   GLOBAL STYLES
+   =========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('OIP.webp') center/cover fixed;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* ===========================
+   MAIN SECTION & CONTAINER
+   =========================== */
+.bank-section {
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bank-container {
+    width: 100%;
+    max-width: 700px;
+}
+
+.bank-content {
+    background: white;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ===========================
+   BACK BUTTON
+   =========================== */
+.back-btn {
+    display: inline-block;
+    color: #ff6b35;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+    color: #e55a24;
+}
+
+/* ===========================
+   TITLE & INFO SECTIONS
+   =========================== */
+.bank-title {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.package-info {
+    text-align: center;
+    font-size: 28px;
+    color: #ff6b35;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.amount-info {
+    text-align: center;
+    font-size: 24px;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ff6b35;
+}
+
+/* ===========================
+   BANK DETAILS SECTION
+   =========================== */
+.bank-details {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid #ff6b35;
+}
+
+.bank-details h3 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 20px;
+    border-bottom: 2px solid #ff6b35;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.detail-item {
+    margin-bottom: 20px;
+}
+
+.detail-item label {
+    display: block;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail-value {
+    background: white;
+    padding: 12px;
+    border-radius: 4px;
+    border-left: 3px solid #ff6b35;
+    margin: 0;
+    color: #333;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* ===========================
+   PAYMENT INSTRUCTIONS
+   =========================== */
+.payment-instructions {
+    background: #fff3e0;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid #ff6b35;
+}
+
+.payment-instructions h3 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-bottom: 2px solid #ff6b35;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.payment-instructions ol {
+    margin: 0;
+    padding-left: 20px;
+    color: #555;
+}
+
+.payment-instructions li {
+    margin-bottom: 12px;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* ===========================
+   CONTACT SUPPORT
+   =========================== */
+.contact-support {
+    background: #e8f5e9;
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid #4caf50;
+    text-align: center;
+}
+
+.contact-support h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.contact-support p {
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.contact-support strong {
+    color: #ff6b35;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* ===========================
+   RECEIPT UPLOAD SECTION
+   =========================== */
+.receipt-upload {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+  
+}
+
+.receipt-upload h3 {
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.receipt-upload p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.upload-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#receiptFile {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*recipt button*/
+ .upload-btn {
+            text-decoration: none;
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        
+        .upload-btn:hover {
+            background-color: #0056b3;
+        }
+
+#receiptFile:hover {
+    border-color: #ff6b35;
+}
+
+#receiptFile:focus {
+    outline: none;
+    border-color: #ff6b35;
+    box-shadow: 0 0 8px rgba(255, 107, 53, 0.3);
+}
+
+.upload-btn {
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.upload-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+}
+
+.upload-btn:active {
+    transform: translateY(0);
+}
+
+.upload-message {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    display: none;
+    line-height: 1.6;
+}
+
+.upload-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block;
+}
+
+.upload-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    .bank-section {
+        min-height: auto;
+        padding: 20px 15px;
+    }
+
+    .bank-container {
+        max-width: 100%;
+    }
+
+    .bank-content {
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-btn {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .bank-title {
+        font-size: 28px;
+        margin-bottom: 8px;
+    }
+
+    .package-info {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    .amount-info {
+        font-size: 20px;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+    }
+
+    .bank-details,
+    .payment-instructions,
+    .contact-support {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .bank-details h3,
+    .payment-instructions h3,
+    .contact-support h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+    }
+
+    .detail-item {
+        margin-bottom: 15px;
+    }
+
+    .detail-item label {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+
+    .detail-value {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .payment-instructions ol {
+        padding-left: 18px;
+    }
+
+    .payment-instructions li {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .contact-support h3 {
+        font-size: 16px;
+    }
+
+    .contact-support p {
+        font-size: 14px;
+    }
+
+    .contact-support strong {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bank-section {
+        padding: 15px 10px;
+    }
+
+    .bank-content {
+        padding: 20px;
+        border-radius: 6px;
+    }
+
+    .back-btn {
+        font-size: 13px;
+        margin-bottom: 12px;
+    }
+
+    .bank-title {
+        font-size: 24px;
+        margin-bottom: 6px;
+    }
+
+    .package-info {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+
+    .amount-info {
+        font-size: 18px;
+        margin-bottom: 25px;
+        padding-bottom: 12px;
+    }
+
+    .bank-details,
+    .payment-instructions,
+    .contact-support {
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 6px;
+    }
+
+    .bank-details h3,
+    .payment-instructions h3,
+    .contact-support h3 {
+        font-size: 16px;
+        margin-bottom: 12px;
+        padding-bottom: 6px;
+    }
+
+    .detail-item {
+        margin-bottom: 12px;
+    }
+
+    .detail-item label {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .detail-value {
+        font-size: 13px;
+        padding: 8px;
+        border-radius: 3px;
+    }
+
+    .payment-instructions ol {
+        padding-left: 15px;
+    }
+
+    .payment-instructions li {
+        font-size: 13px;
+        margin-bottom: 8px;
+        line-height: 1.6;
+    }
+
+    .contact-support h3 {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+
+    .contact-support p {
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .contact-support strong {
+        font-size: 14px;
+    }
+}
+ .receipt-upload {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 30px;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .receipt-upload h3 {
+            color: #333;
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .receipt-upload p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .upload-form {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        #receiptFile {
+            flex: 1;
+            min-width: 200px;
+            padding: 10px 15px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+        }
+
+        #receiptFile:hover {
+            border-color: #ff6b35;
+        }
+
+        #receiptFile:focus {
+            outline: none;
+            border-color: #ff6b35;
+            box-shadow: 0 0 8px rgba(255, 107, 53, 0.3);
+        }
+
+        .upload-btn {
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .upload-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        }
+
+        .upload-btn:active {
+            transform: translateY(0);
+        }
+
+        .upload-message {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            display: none;
+        }
+
+        .upload-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+
+        .upload-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .receipt-upload {
+                padding: 20px;
+                margin-top: 20px;
+            }
+
+            .upload-form {
+                flex-direction: column;
+            }
+
+            #receiptFile {
+                min-width: 100%;
+            }
+
+            .upload-btn {
+                width: 100%;
+            }
+        }
